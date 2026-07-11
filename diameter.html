@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mathify | Diameter Calculator</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-square-root-variable"></i>
+
+            <h2>Mathify</h2>
+
+        </div>
+
+        <nav id="navbar">
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="calculator.html">Calculator</a></li>
+
+                <li><a class="active" href="diameter.html">Diameter</a></li>
+
+                <li><a href="area.html">Area</a></li>
+
+                <li><a href="volume.html">Volume</a></li>
+
+                <li><a href="perimeter.html">Perimeter</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+            </ul>
+
+        </nav>
+
+        <button id="menu-btn">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </header>
+
+    <!-- PAGE TITLE -->
+
+    <section class="page-banner">
+
+        <h1>Circle Formula Calculators</h1>
+
+        <p>
+
+            Calculate diameter, radius, circumference, and area instantly.
+
+        </p>
+
+    </section>
+
+    <!-- CALCULATORS -->
+
+    <section class="formula-grid">
+
+        <!-- Diameter -->
+
+        <div class="formula-card">
+
+            <h2>Diameter</h2>
+
+            <h4>Formula</h4>
+
+            <p><strong>d = 2 × r</strong></p>
+
+            <input
+                type="number"
+                id="radius1"
+                placeholder="Enter Radius">
+
+            <button class="btn" onclick="diameter()">
+
+                Solve
+
+            </button>
+
+            <button class="btn-outline" onclick="clearDiameter()">
+
+                Reset
+
+            </button>
+
+            <h3 id="diameterResult"></h3>
+
+        </div>
+
+        <!-- Radius -->
+
+        <div class="formula-card">
+
+            <h2>Radius</h2>
+
+            <h4>Formula</h4>
+
+            <p><strong>r = d ÷ 2</strong></p>
+
+            <input
+                type="number"
+                id="diameterInput"
+                placeholder="Enter Diameter">
+
+            <button class="btn" onclick="radius()">
+
+                Solve
+
+            </button>
+
+            <button class="btn-outline" onclick="clearRadius()">
+
+                Reset
+
+            </button>
+
+            <h3 id="radiusResult"></h3>
+
+        </div>
+
+        <!-- Circumference -->
+
+        <div class="formula-card">
+
+            <h2>Circumference</h2>
+
+            <h4>Formula</h4>
+
+            <p><strong>C = 2πr</strong></p>
+
+            <input
+                type="number"
+                id="radius2"
+                placeholder="Enter Radius">
+
+            <button class="btn" onclick="circumference()">
+
+                Solve
+
+            </button>
+
+            <button class="btn-outline" onclick="clearCircumference()">
+
+                Reset
+
+            </button>
+
+            <h3 id="circumferenceResult"></h3>
+
+        </div>
+
+        <!-- Area -->
+
+        <div class="formula-card">
+
+            <h2>Area of Circle</h2>
+
+            <h4>Formula</h4>
+
+            <p><strong>A = πr²</strong></p>
+
+            <input
+                type="number"
+                id="radius3"
+                placeholder="Enter Radius">
+
+            <button class="btn" onclick="circleArea()">
+
+                Solve
+
+            </button>
+
+            <button class="btn-outline" onclick="clearAreaCircle()">
+
+                Reset
+
+            </button>
+
+            <h3 id="areaResult"></h3>
+
+        </div>
+
+        <!-- Radius from Circumference -->
+
+        <div class="formula-card">
+
+            <h2>Radius from Circumference</h2>
+
+            <h4>Formula</h4>
+
+            <p><strong>r = C ÷ (2π)</strong></p>
+
+            <input
+                type="number"
+                id="circumferenceInput"
+                placeholder="Enter Circumference">
+
+            <button class="btn" onclick="radiusFromCircumference()">
+
+                Solve
+
+            </button>
+
+            <button class="btn-outline" onclick="clearRadiusCircumference()">
+
+                Reset
+
+            </button>
+
+            <h3 id="radiusCircumferenceResult"></h3>
+
+        </div>
+
+    </section>
+
+    <!-- INFORMATION -->
+
+    <section class="info-section">
+
+        <h2>Circle Formula Guide</h2>
+
+        <div class="feature-container">
+
+            <div class="feature">
+
+                <i class="fa-solid fa-circle"></i>
+
+                <h3>Diameter</h3>
+
+                <p>
+
+                    The diameter is twice the length of the radius.
+
+                </p>
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-ruler"></i>
+
+                <h3>Radius</h3>
+
+                <p>
+
+                    The radius is half of the diameter.
+
+                </p>
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-arrows-rotate"></i>
+
+                <h3>Circumference</h3>
+
+                <p>
+
+                    The circumference is the distance around the circle.
+
+                </p>
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-shapes"></i>
+
+                <h3>Area</h3>
+
+                <p>
+
+                    Area measures the space inside a circle.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h2>Mathify</h2>
+
+            <p>
+
+                Learn • Calculate • Achieve
+
+            </p>
+
+            <p>
+
+                © 2026 Mathify. All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- Scroll Button -->
+
+    <button id="topBtn">
+
+        <i class="fa-solid fa-arrow-up"></i>
+
+    </button>
+
+    <!-- External JavaScript -->
+
+    <script src="javascript.js"></script>
+
+</body>
+
+</html>

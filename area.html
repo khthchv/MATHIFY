@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mathify | Area Calculator</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- External CSS -->
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-square-root-variable"></i>
+
+            <h2>Mathify</h2>
+
+        </div>
+
+        <nav id="navbar">
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="calculator.html">Calculator</a></li>
+
+                <li><a href="diameter.html">Diameter</a></li>
+
+                <li><a class="active" href="area.html">Area</a></li>
+
+                <li><a href="volume.html">Volume</a></li>
+
+                <li><a href="perimeter.html">Perimeter</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+            </ul>
+
+        </nav>
+
+        <button id="menu-btn">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </header>
+
+    <!-- PAGE TITLE -->
+
+    <section class="page-banner">
+
+        <h1>Area Calculators</h1>
+
+        <p>
+
+            Calculate the area of common geometric figures quickly and accurately.
+
+        </p>
+
+    </section>
+
+    <!-- AREA CALCULATORS -->
+
+    <section class="formula-grid">
+
+        <!-- Rectangle -->
+
+        <div class="formula-card">
+
+            <h2>Rectangle</h2>
+
+            <p><strong>Formula:</strong> A = Length × Width</p>
+
+            <input type="number" id="rectLength" placeholder="Length">
+
+            <input type="number" id="rectWidth" placeholder="Width">
+
+            <button class="btn" onclick="rectangleArea()">Solve</button>
+
+            <button class="btn-outline" onclick="clearRectangle()">Reset</button>
+
+            <h3 id="rectangleResult"></h3>
+
+        </div>
+
+        <!-- Square -->
+
+        <div class="formula-card">
+
+            <h2>Square</h2>
+
+            <p><strong>Formula:</strong> A = Side²</p>
+
+            <input type="number" id="squareSide" placeholder="Side">
+
+            <button class="btn" onclick="squareArea()">Solve</button>
+
+            <button class="btn-outline" onclick="clearSquare()">Reset</button>
+
+            <h3 id="squareResult"></h3>
+
+        </div>
+
+        <!-- Triangle -->
+
+        <div class="formula-card">
+
+            <h2>Triangle</h2>
+
+            <p><strong>Formula:</strong> A = ½ × Base × Height</p>
+
+            <input type="number" id="triangleBase" placeholder="Base">
+
+            <input type="number" id="triangleHeight" placeholder="Height">
+
+            <button class="btn" onclick="triangleArea()">Solve</button>
+
+            <button class="btn-outline" onclick="clearTriangle()">Reset</button>
+
+            <h3 id="triangleResult"></h3>
+
+        </div>
+
+        <!-- Circle -->
+
+        <div class="formula-card">
+
+            <h2>Circle</h2>
+
+            <p><strong>Formula:</strong> A = πr²</p>
+
+            <input type="number" id="circleRadius" placeholder="Radius">
+
+            <button class="btn" onclick="areaCircle()">Solve</button>
+
+            <button class="btn-outline" onclick="clearCircle()">Reset</button>
+
+            <h3 id="circleResult"></h3>
+
+        </div>
+
+        <!-- Parallelogram -->
+
+        <div class="formula-card">
+
+            <h2>Parallelogram</h2>
+
+            <p><strong>Formula:</strong> A = Base × Height</p>
+
+            <input type="number" id="paraBase" placeholder="Base">
+
+            <input type="number" id="paraHeight" placeholder="Height">
+
+            <button class="btn" onclick="parallelogramArea()">Solve</button>
+
+            <button class="btn-outline" onclick="clearParallelogram()">Reset</button>
+
+            <h3 id="parallelogramResult"></h3>
+
+        </div>
+
+        <!-- Trapezoid -->
+
+        <div class="formula-card">
+
+            <h2>Trapezoid</h2>
+
+            <p><strong>Formula:</strong> A = ((a + b) × h) ÷ 2</p>
+
+            <input type="number" id="trapBase1" placeholder="Base 1">
+
+            <input type="number" id="trapBase2" placeholder="Base 2">
+
+            <input type="number" id="trapHeight" placeholder="Height">
+
+            <button class="btn" onclick="trapezoidArea()">Solve</button>
+
+            <button class="btn-outline" onclick="clearTrapezoid()">Reset</button>
+
+            <h3 id="trapezoidResult"></h3>
+
+        </div>
+
+    </section>
+
+    <!-- EDUCATIONAL SECTION -->
+
+    <section class="features-info">
+
+        <h2>Area Formula Guide</h2>
+
+        <div class="feature-container">
+
+            <div class="feature">
+
+                <i class="fa-solid fa-vector-square"></i>
+
+                <h3>Rectangle</h3>
+
+                <p>Area is calculated by multiplying the length and width.</p>
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-regular fa-square"></i>
+
+                <h3>Square</h3>
+
+                <p>The area is the square of one side.</p>
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-play"></i>
+
+                <h3>Triangle</h3>
+
+                <p>Multiply the base and height, then divide by two.</p>
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-regular fa-circle"></i>
+
+                <h3>Circle</h3>
+
+                <p>Multiply π by the square of the radius.</p>
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-diamond"></i>
+
+                <h3>Parallelogram</h3>
+
+                <p>Area equals base multiplied by height.</p>
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-shapes"></i>
+
+                <h3>Trapezoid</h3>
+
+                <p>Add both bases, multiply by the height, then divide by two.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h2>Mathify</h2>
+
+            <p>
+
+                Learn • Calculate • Achieve
+
+            </p>
+
+            <p>
+
+                © 2026 Mathify. All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- Scroll Button -->
+
+    <button id="topBtn">
+
+        <i class="fa-solid fa-arrow-up"></i>
+
+    </button>
+
+    <!-- External JavaScript -->
+
+    <script src="javascript.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1848 @@
+/*==================================================
+            MATHIFY | STYLE.CSS (PART 1)
+        Theme: Pastel Pink / Baby Pink
+==================================================*/
+
+/*========== GOOGLE FONT ==========*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/*========== CSS VARIABLES ==========*/
+
+:root{
+
+    --primary:#f8b4c9;
+    --secondary:#ffd6e7;
+    --light:#fff8fb;
+    --white:#ffffff;
+    --dark:#444444;
+    --gray:#777777;
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+    --radius:18px;
+    --transition:.35s ease;
+
+}
+
+
+/*========== RESET ==========*/
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:var(--light);
+    color:var(--dark);
+    overflow-x:hidden;
+
+}
+
+
+/*========== SCROLLBAR ==========*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#ffe9f2;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#ec8fb0;
+
+}
+
+
+/*========== LINKS ==========*/
+
+a{
+
+    text-decoration:none;
+    color:inherit;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+img{
+
+    width:100%;
+    display:block;
+
+}
+
+
+/*========== SECTION ==========*/
+
+section{
+
+    padding:80px 8%;
+
+}
+
+.title{
+
+    text-align:center;
+    font-size:2.2rem;
+    color:#e86c9d;
+    margin-bottom:50px;
+
+}
+
+
+/*==================================================
+                    PRELOADER
+==================================================*/
+
+#loader{
+
+    position:fixed;
+    inset:0;
+    background:var(--light);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+
+}
+
+.spinner{
+
+    width:70px;
+    height:70px;
+    border:8px solid #ffd9e8;
+    border-top:8px solid #f48fb1;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+
+}
+
+#loader h2{
+
+    margin-top:20px;
+    color:#ea7aa7;
+    letter-spacing:2px;
+
+}
+
+@keyframes spin{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+/*==================================================
+                    HEADER
+==================================================*/
+
+header{
+
+    width:100%;
+    height:80px;
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(18px);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 8%;
+
+    position:sticky;
+    top:0;
+
+    z-index:999;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+/*========== LOGO ==========*/
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+}
+
+.logo i{
+
+    font-size:34px;
+    color:#f48fb1;
+
+}
+
+.logo h2{
+
+    color:#ef7da8;
+    font-size:1.8rem;
+
+}
+
+
+/*========== NAVIGATION ==========*/
+
+nav ul{
+
+    display:flex;
+    align-items:center;
+    gap:28px;
+
+}
+
+nav ul li a{
+
+    color:#666;
+    font-weight:500;
+
+    transition:var(--transition);
+
+}
+
+nav ul li a:hover{
+
+    color:#ef7da8;
+
+}
+
+nav ul li a.active{
+
+    color:#ef7da8;
+    position:relative;
+
+}
+
+nav ul li a.active::after{
+
+    content:'';
+
+    width:100%;
+    height:3px;
+
+    background:#ef7da8;
+
+    position:absolute;
+    left:0;
+    bottom:-8px;
+
+    border-radius:20px;
+
+}
+
+
+/*========== HAMBURGER ==========*/
+
+#menu-btn{
+
+    display:none;
+
+    border:none;
+    background:none;
+
+    cursor:pointer;
+
+    font-size:25px;
+
+    color:#ef7da8;
+
+}
+
+
+/*==================================================
+                    BUTTONS
+==================================================*/
+
+.btn{
+
+    display:inline-block;
+
+    padding:14px 32px;
+
+    background:linear-gradient(135deg,#f8b4c9,#f48fb1);
+
+    color:white;
+
+    border:none;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    font-weight:600;
+
+    box-shadow:0 8px 20px rgba(244,143,177,.30);
+
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 30px rgba(244,143,177,.40);
+
+}
+
+.btn-outline{
+
+    display:inline-block;
+
+    padding:14px 32px;
+
+    border:2px solid #f48fb1;
+
+    color:#f48fb1;
+
+    background:white;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    font-weight:600;
+
+}
+
+.btn-outline:hover{
+
+    background:#f48fb1;
+
+    color:white;
+
+}
+
+
+/*==================================================
+                PAGE BANNER
+==================================================*/
+
+.page-banner{
+
+    text-align:center;
+
+    background:linear-gradient(135deg,#ffd9e8,#fff8fb);
+
+    padding:100px 10%;
+
+}
+
+.page-banner h1{
+
+    font-size:3rem;
+
+    color:#e56f9f;
+
+}
+
+.page-banner p{
+
+    margin-top:15px;
+
+    color:#666;
+
+    font-size:1.05rem;
+
+}
+
+
+/*==================================================
+                    HERO
+==================================================*/
+
+.hero{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:60px;
+
+    align-items:center;
+
+    min-height:85vh;
+
+}
+
+.hero-text h1{
+
+    font-size:3.7rem;
+
+    line-height:1.2;
+
+    margin-bottom:25px;
+
+}
+
+.hero-text span{
+
+    color:#ef7da8;
+
+}
+
+.hero-text p{
+
+    color:#666;
+
+    font-size:1.05rem;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-image img{
+
+    max-width:520px;
+
+    margin:auto;
+
+    animation:float 3s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*==================================================
+                    INFO CARDS
+==================================================*/
+
+.info{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:var(--radius);
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.card i{
+
+    font-size:40px;
+
+    color:#ef7da8;
+
+    margin-bottom:18px;
+
+}
+
+.card h3{
+
+    margin-bottom:10px;
+
+    color:#444;
+
+}
+
+.card p{
+
+    color:#666;
+
+}
+
+
+/*==================================================
+                    FOOTER
+==================================================*/
+
+footer{
+
+    background:#f8b4c9;
+
+    color:white;
+
+    text-align:center;
+
+    padding:50px 20px;
+
+}
+
+.footer-content h2{
+
+    margin-bottom:10px;
+
+    font-size:2rem;
+
+}
+
+.footer-content p{
+
+    margin:8px 0;
+
+}
+
+.socials{
+
+    margin:20px 0;
+
+}
+
+.socials a{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:white;
+
+    color:#ef7da8;
+
+    margin:0 8px;
+
+    transition:.35s;
+
+}
+
+.socials a:hover{
+
+    transform:translateY(-6px);
+
+}
+
+
+/*==================================================
+                RESPONSIVE NAVBAR
+==================================================*/
+
+@media(max-width:900px){
+
+    #menu-btn{
+
+        display:block;
+
+    }
+
+    nav{
+
+        position:absolute;
+
+        top:80px;
+        left:-100%;
+
+        width:100%;
+
+        background:white;
+
+        box-shadow:var(--shadow);
+
+        transition:.35s;
+
+    }
+
+    nav.active{
+
+        left:0;
+
+    }
+
+    nav ul{
+
+        flex-direction:column;
+
+        padding:30px;
+
+    }
+
+    .hero{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .hero-image{
+
+        order:-1;
+
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .hero-text h1{
+
+        font-size:2.5rem;
+
+    }
+
+    .page-banner h1{
+
+        font-size:2.2rem;
+
+    }
+
+    section{
+
+        padding:60px 6%;
+
+    }
+
+}
+
+/*==================================================
+            MATHIFY | STYLE.CSS (PART 2A)
+        Calculator & Formula Sections
+==================================================*/
+
+
+/*=========================================
+            CALCULATOR SECTION
+=========================================*/
+
+.calculator-section{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.calculator-container{
+
+    width:100%;
+    display:flex;
+    justify-content:center;
+
+}
+
+.calculator{
+
+    width:420px;
+    max-width:100%;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+/*=========================================
+            DISPLAY
+=========================================*/
+
+#display{
+
+    width:100%;
+
+    height:75px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:15px;
+
+    background:#fff4f8;
+
+    color:#444;
+
+    font-size:2rem;
+
+    text-align:right;
+
+    padding:20px;
+
+    margin-bottom:25px;
+
+    box-shadow:inset 0 3px 10px rgba(0,0,0,.08);
+
+}
+
+
+/*=========================================
+        CALCULATOR BUTTONS
+=========================================*/
+
+.calculator-buttons{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:15px;
+
+}
+
+.calculator-buttons button{
+
+    height:65px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:white;
+
+    color:#444;
+
+    font-size:1.1rem;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.08);
+
+}
+
+.calculator-buttons button:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.calculator-buttons button:active{
+
+    transform:scale(.95);
+
+}
+
+.operator{
+
+    background:#ffd8e8 !important;
+
+    color:#d84b87 !important;
+
+    font-weight:600;
+
+}
+
+.special{
+
+    background:#f8b4c9 !important;
+
+    color:white !important;
+
+}
+
+.equal{
+
+    grid-column:span 2;
+
+    background:linear-gradient(135deg,#f48fb1,#ec6c98) !important;
+
+    color:white !important;
+
+    font-size:1.3rem;
+
+}
+
+
+/*=========================================
+        HISTORY SECTION
+=========================================*/
+
+.history-section{
+
+    text-align:center;
+
+}
+
+.history-section h2{
+
+    color:#e56f9f;
+
+    margin-bottom:25px;
+
+}
+
+#historyList{
+
+    max-width:700px;
+
+    margin:auto;
+
+    background:white;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    padding:20px;
+
+    min-height:100px;
+
+    text-align:left;
+
+}
+
+#historyList li{
+
+    padding:12px;
+
+    border-bottom:1px solid #f3d8e2;
+
+    color:#666;
+
+}
+
+#historyList li:last-child{
+
+    border-bottom:none;
+
+}
+
+
+/*=========================================
+            FORMULA GRID
+=========================================*/
+
+.formula-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+
+}
+
+
+/*=========================================
+            FORMULA CARD
+=========================================*/
+
+.formula-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.formula-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.formula-card h2{
+
+    color:#ea6d9d;
+
+    margin-bottom:12px;
+
+}
+
+.formula-card h4{
+
+    color:#777;
+
+    margin-bottom:10px;
+
+}
+
+.formula-card p{
+
+    color:#666;
+
+    margin-bottom:18px;
+
+    line-height:1.7;
+
+}
+
+
+/*=========================================
+                INPUTS
+=========================================*/
+
+.formula-card input,
+
+.newsletter input{
+
+    width:100%;
+
+    padding:15px;
+
+    margin:10px 0;
+
+    border:2px solid #ffd5e6;
+
+    border-radius:12px;
+
+    outline:none;
+
+    font-size:1rem;
+
+    transition:.3s;
+
+    background:#fffdfd;
+
+}
+
+.formula-card input:focus,
+
+.newsletter input:focus{
+
+    border-color:#f48fb1;
+
+    box-shadow:0 0 10px rgba(244,143,177,.25);
+
+}
+
+
+/*=========================================
+            RESULT BOXES
+=========================================*/
+
+.formula-card h3{
+
+    margin-top:20px;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    background:#fff3f8;
+
+    color:#d85c90;
+
+    min-height:55px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    font-weight:600;
+
+}
+
+
+/*=========================================
+            BUTTON SPACING
+=========================================*/
+
+.formula-card .btn,
+
+.formula-card .btn-outline{
+
+    width:100%;
+
+    margin-top:12px;
+
+}
+
+
+/*=========================================
+            INFO SECTION
+=========================================*/
+
+.info-section{
+
+    text-align:center;
+
+}
+
+.info-section h2{
+
+    color:#e56f9f;
+
+    margin-bottom:45px;
+
+}
+
+
+/*=========================================
+        FEATURES INFORMATION
+=========================================*/
+
+.features-info{
+
+    text-align:center;
+
+}
+
+.features-info h2{
+
+    color:#ea6d9d;
+
+    margin-bottom:45px;
+
+}
+
+
+/*=========================================
+            MOBILE
+=========================================*/
+
+@media(max-width:768px){
+
+    .calculator{
+
+        padding:20px;
+
+    }
+
+    .calculator-buttons{
+
+        gap:10px;
+
+    }
+
+    .calculator-buttons button{
+
+        height:58px;
+
+        font-size:1rem;
+
+    }
+
+    #display{
+
+        font-size:1.6rem;
+
+    }
+
+    .formula-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .calculator{
+
+        width:100%;
+
+    }
+
+    .calculator-buttons button{
+
+        height:55px;
+
+        font-size:.95rem;
+
+    }
+
+    #display{
+
+        height:65px;
+
+        font-size:1.4rem;
+
+        padding:15px;
+
+    }
+
+}
+
+/*==================================================
+            MATHIFY | STYLE.CSS (PART 2B)
+        Home & About Page Components
+==================================================*/
+
+
+/*=========================================
+            FEATURE CARDS
+=========================================*/
+
+.feature-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+
+.feature{
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.feature:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.feature i{
+
+    font-size:45px;
+
+    color:#f48fb1;
+
+    margin-bottom:18px;
+
+}
+
+.feature h3{
+
+    color:#e56f9f;
+
+    margin-bottom:15px;
+
+}
+
+.feature p{
+
+    color:#666;
+
+    line-height:1.7;
+
+}
+
+
+/*=========================================
+            WHY CHOOSE SECTION
+=========================================*/
+
+.why{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+.why-text h2{
+
+    color:#ea6d9d;
+
+    font-size:2.3rem;
+
+    margin-bottom:25px;
+
+}
+
+.why-text p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+.why-text ul li{
+
+    margin:15px 0;
+
+    font-size:1rem;
+
+    color:#555;
+
+}
+
+.why-text i{
+
+    color:#f48fb1;
+
+    margin-right:10px;
+
+}
+
+.why-image img{
+
+    width:100%;
+
+    max-width:420px;
+
+    margin:auto;
+
+}
+
+
+/*=========================================
+            FUN FACT
+=========================================*/
+
+.fact{
+
+    text-align:center;
+
+    background:#fff0f6;
+
+    border-radius:20px;
+
+    margin:50px 8%;
+
+}
+
+.fact h2{
+
+    color:#e56f9f;
+
+    margin-bottom:20px;
+
+}
+
+.fact p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+
+/*=========================================
+            QUICK LINKS
+=========================================*/
+
+.quick-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:25px;
+
+}
+
+.quick-grid a{
+
+    background:white;
+
+    padding:30px;
+
+    text-align:center;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+    font-weight:600;
+
+    color:#555;
+
+}
+
+.quick-grid a:hover{
+
+    transform:translateY(-8px);
+
+    background:#ffe7f0;
+
+}
+
+.quick-grid i{
+
+    display:block;
+
+    font-size:40px;
+
+    color:#f48fb1;
+
+    margin-bottom:15px;
+
+}
+
+
+/*=========================================
+            NEWSLETTER
+=========================================*/
+
+.newsletter{
+
+    text-align:center;
+
+    background:white;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.newsletter h2{
+
+    color:#e56f9f;
+
+    margin-bottom:15px;
+
+}
+
+.newsletter p{
+
+    color:#666;
+
+    margin-bottom:20px;
+
+}
+
+.newsletter input{
+
+    max-width:420px;
+
+    margin:auto;
+
+    display:block;
+
+    margin-bottom:20px;
+
+}
+
+#greeting{
+
+    margin-top:20px;
+
+    color:#f06292;
+
+}
+
+
+/*=========================================
+            ABOUT PAGE
+=========================================*/
+
+.about-container{
+
+    display:grid;
+
+    grid-template-columns:320px 1fr;
+
+    gap:45px;
+
+    align-items:start;
+
+}
+
+.profile-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    padding:30px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.profile-card img{
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    margin:auto;
+
+    border:8px solid #ffd8e8;
+
+}
+
+.profile-card h2{
+
+    margin-top:20px;
+
+    color:#e56f9f;
+
+}
+
+.course{
+
+    color:#777;
+
+    margin-top:8px;
+
+}
+
+.about-info{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.about-info h2{
+
+    color:#e56f9f;
+
+    margin-bottom:25px;
+
+}
+
+
+/*=========================================
+                TABLE
+=========================================*/
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+table tr{
+
+    border-bottom:1px solid #f3d8e2;
+
+}
+
+table td{
+
+    padding:15px;
+
+    color:#555;
+
+}
+
+table td:first-child{
+
+    color:#e56f9f;
+
+    width:180px;
+
+}
+
+
+/*=========================================
+            ABOUT SECTION
+=========================================*/
+
+.about-section{
+
+    margin-top:50px;
+
+}
+
+.about-section h2{
+
+    color:#ea6d9d;
+
+    margin-bottom:20px;
+
+}
+
+.about-section p{
+
+    color:#666;
+
+    line-height:1.9;
+
+}
+
+
+/*=========================================
+            SKILLS
+=========================================*/
+
+.skills-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+.skill{
+
+    background:white;
+
+    padding:30px;
+
+    text-align:center;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.skill:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.skill i{
+
+    font-size:50px;
+
+    color:#f48fb1;
+
+    margin-bottom:15px;
+
+}
+
+.skill h3{
+
+    color:#e56f9f;
+
+    margin-bottom:10px;
+
+}
+
+.skill p{
+
+    color:#666;
+
+}
+
+
+/*=========================================
+            CONTACT
+=========================================*/
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+.contact-card{
+
+    background:white;
+
+    padding:30px;
+
+    text-align:center;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.contact-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.contact-card i{
+
+    font-size:45px;
+
+    color:#f48fb1;
+
+    margin-bottom:15px;
+
+}
+
+.contact-card h3{
+
+    color:#e56f9f;
+
+    margin-bottom:10px;
+
+}
+
+.contact-card p{
+
+    color:#666;
+
+    word-break:break-word;
+
+}
+
+
+/*=========================================
+        SCROLL TO TOP BUTTON
+=========================================*/
+
+#topBtn{
+
+    position:fixed;
+
+    bottom:25px;
+
+    right:25px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#f48fb1;
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    display:none;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+    z-index:999;
+
+}
+
+#topBtn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+/*=========================================
+            RESPONSIVE
+=========================================*/
+
+@media(max-width:992px){
+
+    .why{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .about-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .profile-card{
+
+        max-width:380px;
+
+        margin:auto;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .feature-container,
+
+    .quick-grid,
+
+    .skills-grid,
+
+    .contact-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    table td{
+
+        display:block;
+
+        width:100%;
+
+        padding:10px;
+
+    }
+
+    table tr{
+
+        display:block;
+
+        margin-bottom:15px;
+
+        border:1px solid #f4d4e3;
+
+        border-radius:12px;
+
+        padding:10px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .profile-card img{
+
+        width:170px;
+
+        height:170px;
+
+    }
+
+    .why-text h2{
+
+        font-size:1.9rem;
+
+    }
+
+    .about-info{
+
+        padding:25px;
+
+    }
+
+}

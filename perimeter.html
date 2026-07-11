@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mathify | Perimeter Calculator</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- External CSS -->
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+
+        <i class="fa-solid fa-square-root-variable"></i>
+
+        <h2>Mathify</h2>
+
+    </div>
+
+    <nav id="navbar">
+
+        <ul>
+
+            <li><a href="index.html">Home</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+            <li><a href="diameter.html">Diameter</a></li>
+            <li><a href="area.html">Area</a></li>
+            <li><a href="volume.html">Volume</a></li>
+            <li><a class="active" href="perimeter.html">Perimeter</a></li>
+            <li><a href="about.html">About</a></li>
+
+        </ul>
+
+    </nav>
+
+    <button id="menu-btn">
+
+        <i class="fa-solid fa-bars"></i>
+
+    </button>
+
+</header>
+
+<section class="page-banner">
+
+    <h1>Perimeter Calculators</h1>
+
+    <p>
+
+        Find the perimeter or circumference of common geometric figures.
+
+    </p>
+
+</section>
+
+<section class="formula-grid">
+
+    <!-- Rectangle -->
+
+    <div class="formula-card">
+
+        <h2>Rectangle</h2>
+
+        <p><strong>Formula:</strong> P = 2(L + W)</p>
+
+        <input type="number" id="rectPerLength" placeholder="Length">
+
+        <input type="number" id="rectPerWidth" placeholder="Width">
+
+        <button class="btn" onclick="rectanglePerimeter()">Solve</button>
+
+        <button class="btn-outline" onclick="clearRectanglePerimeter()">Reset</button>
+
+        <h3 id="rectanglePerimeterResult"></h3>
+
+    </div>
+
+    <!-- Square -->
+
+    <div class="formula-card">
+
+        <h2>Square</h2>
+
+        <p><strong>Formula:</strong> P = 4 × Side</p>
+
+        <input type="number" id="squarePerSide" placeholder="Side">
+
+        <button class="btn" onclick="squarePerimeter()">Solve</button>
+
+        <button class="btn-outline" onclick="clearSquarePerimeter()">Reset</button>
+
+        <h3 id="squarePerimeterResult"></h3>
+
+    </div>
+
+    <!-- Triangle -->
+
+    <div class="formula-card">
+
+        <h2>Triangle</h2>
+
+        <p><strong>Formula:</strong> P = a + b + c</p>
+
+        <input type="number" id="triangleSide1" placeholder="Side A">
+
+        <input type="number" id="triangleSide2" placeholder="Side B">
+
+        <input type="number" id="triangleSide3" placeholder="Side C">
+
+        <button class="btn" onclick="trianglePerimeter()">Solve</button>
+
+        <button class="btn-outline" onclick="clearTrianglePerimeter()">Reset</button>
+
+        <h3 id="trianglePerimeterResult"></h3>
+
+    </div>
+
+    <!-- Circle -->
+
+    <div class="formula-card">
+
+        <h2>Circle</h2>
+
+        <p><strong>Formula:</strong> C = 2πr</p>
+
+        <input type="number" id="circlePerRadius" placeholder="Radius">
+
+        <button class="btn" onclick="circlePerimeter()">Solve</button>
+
+        <button class="btn-outline" onclick="clearCirclePerimeter()">Reset</button>
+
+        <h3 id="circlePerimeterResult"></h3>
+
+    </div>
+
+    <!-- Parallelogram -->
+
+    <div class="formula-card">
+
+        <h2>Parallelogram</h2>
+
+        <p><strong>Formula:</strong> P = 2(a + b)</p>
+
+        <input type="number" id="paraSide1" placeholder="Base">
+
+        <input type="number" id="paraSide2" placeholder="Side">
+
+        <button class="btn" onclick="parallelogramPerimeter()">Solve</button>
+
+        <button class="btn-outline" onclick="clearParallelogramPerimeter()">Reset</button>
+
+        <h3 id="parallelogramPerimeterResult"></h3>
+
+    </div>
+
+    <!-- Trapezoid -->
+
+    <div class="formula-card">
+
+        <h2>Trapezoid</h2>
+
+        <p><strong>Formula:</strong> P = a + b + c + d</p>
+
+        <input type="number" id="trapSide1" placeholder="Side A">
+
+        <input type="number" id="trapSide2" placeholder="Side B">
+
+        <input type="number" id="trapSide3" placeholder="Side C">
+
+        <input type="number" id="trapSide4" placeholder="Side D">
+
+        <button class="btn" onclick="trapezoidPerimeter()">Solve</button>
+
+        <button class="btn-outline" onclick="clearTrapezoidPerimeter()">Reset</button>
+
+        <h3 id="trapezoidPerimeterResult"></h3>
+
+    </div>
+
+</section>
+
+<section class="features-info">
+
+    <h2>Perimeter Formula Guide</h2>
+
+    <div class="feature-container">
+
+        <div class="feature">
+
+            <i class="fa-solid fa-vector-square"></i>
+
+            <h3>Rectangle</h3>
+
+            <p>Add the length and width, then multiply by two.</p>
+
+        </div>
+
+        <div class="feature">
+
+            <i class="fa-regular fa-square"></i>
+
+            <h3>Square</h3>
+
+            <p>Multiply one side by four.</p>
+
+        </div>
+
+        <div class="feature">
+
+            <i class="fa-solid fa-play"></i>
+
+            <h3>Triangle</h3>
+
+            <p>Add the lengths of all three sides.</p>
+
+        </div>
+
+        <div class="feature">
+
+            <i class="fa-regular fa-circle"></i>
+
+            <h3>Circle</h3>
+
+            <p>The perimeter of a circle is called the circumference.</p>
+
+        </div>
+
+        <div class="feature">
+
+            <i class="fa-solid fa-diamond"></i>
+
+            <h3>Parallelogram</h3>
+
+            <p>Add one base and one side, then multiply by two.</p>
+
+        </div>
+
+        <div class="feature">
+
+            <i class="fa-solid fa-shapes"></i>
+
+            <h3>Trapezoid</h3>
+
+            <p>Add all four sides together.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <div class="footer-content">
+
+        <h2>Mathify</h2>
+
+        <p>Learn • Calculate • Achieve</p>
+
+        <p>© 2026 Mathify. All Rights Reserved.</p>
+
+    </div>
+
+</footer>
+
+<button id="topBtn">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+<script src="javascript.js"></script>
+
+</body>
+
+</html>

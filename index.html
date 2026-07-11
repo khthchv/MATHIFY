@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mathify | Home</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= PRELOADER ================= -->
+
+    <div id="loader">
+        <div class="spinner"></div>
+        <h2>Mathify</h2>
+    </div>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-square-root-variable"></i>
+
+            <h2>Mathify</h2>
+
+        </div>
+
+        <nav id="navbar">
+
+            <ul>
+
+                <li><a class="active" href="index.html">Home</a></li>
+
+                <li><a href="calculator.html">Calculator</a></li>
+
+                <li><a href="diameter.html">Diameter</a></li>
+
+                <li><a href="area.html">Area</a></li>
+
+                <li><a href="volume.html">Volume</a></li>
+
+                <li><a href="perimeter.html">Perimeter</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+            </ul>
+
+        </nav>
+
+        <button id="menu-btn">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </header>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>Welcome to <span>Mathify</span></h1>
+
+            <p>
+
+                Learn mathematics the easier way with interactive calculators,
+                formulas, and problem-solving tools.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="calculator.html" class="btn">Start Calculating</a>
+
+                <a href="#features" class="btn-outline">Explore</a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img src="img/K/banner.png" alt="Math Banner">
+
+        </div>
+
+    </section>
+
+    <!-- ================= INFO ================= -->
+
+    <section class="info">
+
+        <div class="card">
+
+            <i class="fa-solid fa-calendar-days"></i>
+
+            <h3>Today's Date</h3>
+
+            <p id="date"></p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-clock"></i>
+
+            <h3>Current Time</h3>
+
+            <p id="clock"></p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-quote-left"></i>
+
+            <h3>Math Quote</h3>
+
+            <p id="quote"></p>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FEATURES ================= -->
+
+    <section id="features">
+
+        <h2 class="title">Website Features</h2>
+
+        <div class="feature-container">
+
+            <div class="feature">
+
+                <i class="fa-solid fa-calculator"></i>
+
+                <h3>Scientific Calculator</h3>
+
+                <p>
+
+                    Perform mathematical calculations quickly and accurately.
+
+                </p>
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-circle"></i>
+
+                <h3>Diameter Tools</h3>
+
+                <p>
+
+                    Calculate radius, diameter, circumference and more.
+
+                </p>
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-shapes"></i>
+
+                <h3>Area Formulas</h3>
+
+                <p>
+
+                    Find the area of different geometric figures.
+
+                </p>
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-cube"></i>
+
+                <h3>Volume Formulas</h3>
+
+                <p>
+
+                    Solve the volume of common 3D shapes.
+
+                </p>
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-ruler"></i>
+
+                <h3>Perimeter</h3>
+
+                <p>
+
+                    Compute the perimeter and circumference instantly.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= WHY CHOOSE ================= -->
+
+    <section class="why">
+
+        <div class="why-text">
+
+            <h2>Why Choose Mathify?</h2>
+
+            <p>
+
+                Mathify is an educational website designed to help students
+                solve mathematical problems efficiently. Every calculator is
+                easy to use, interactive, and built using HTML, CSS, and
+                JavaScript.
+
+            </p>
+
+            <ul>
+
+                <li><i class="fa-solid fa-check"></i> Easy to Understand</li>
+
+                <li><i class="fa-solid fa-check"></i> Interactive Calculators</li>
+
+                <li><i class="fa-solid fa-check"></i> Mobile Friendly</li>
+
+                <li><i class="fa-solid fa-check"></i> Fast and Accurate</li>
+
+            </ul>
+
+        </div>
+
+        <div class="why-image">
+
+            <img src="img/K/why.png" alt="Mathify">
+
+        </div>
+
+    </section>
+
+    <!-- ================= FUN FACT ================= -->
+
+    <section class="fact">
+
+        <h2>Did You Know?</h2>
+
+        <p id="fact"></p>
+
+        <button id="factBtn" class="btn">
+
+            New Fun Fact
+
+        </button>
+
+    </section>
+
+    <!-- ================= QUICK LINKS ================= -->
+
+    <section class="quick-links">
+
+        <h2 class="title">Quick Navigation</h2>
+
+        <div class="quick-grid">
+
+            <a href="calculator.html">
+
+                <i class="fa-solid fa-calculator"></i>
+
+                Calculator
+
+            </a>
+
+            <a href="diameter.html">
+
+                <i class="fa-solid fa-circle"></i>
+
+                Diameter
+
+            </a>
+
+            <a href="area.html">
+
+                <i class="fa-solid fa-shapes"></i>
+
+                Area
+
+            </a>
+
+            <a href="volume.html">
+
+                <i class="fa-solid fa-cube"></i>
+
+                Volume
+
+            </a>
+
+            <a href="perimeter.html">
+
+                <i class="fa-solid fa-ruler"></i>
+
+                Perimeter
+
+            </a>
+
+            <a href="about.html">
+
+                <i class="fa-solid fa-user"></i>
+
+                About Me
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ================= NEWSLETTER ================= -->
+
+    <section class="newsletter">
+
+        <h2>Stay Motivated</h2>
+
+        <p>
+
+            Enter your name to receive a motivational greeting.
+
+        </p>
+
+        <input
+            type="text"
+            id="username"
+            placeholder="Enter your name">
+
+        <button class="btn" onclick="greetUser()">
+
+            Greet Me
+
+        </button>
+
+        <h3 id="greeting"></h3>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h2>Mathify</h2>
+
+            <p>
+
+                Learn • Calculate • Achieve
+
+            </p>
+
+            <div class="socials">
+
+                <a href="#"><i class="fab fa-facebook"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-github"></i></a>
+
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+
+            </div>
+
+            <p>
+
+                © 2026 Mathify. All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- Scroll Button -->
+
+    <button id="topBtn">
+
+        <i class="fa-solid fa-arrow-up"></i>
+
+    </button>
+
+    <!-- External JavaScript -->
+
+    <script src="javascript.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mathify | Volume Calculator</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+
+        <i class="fa-solid fa-square-root-variable"></i>
+
+        <h2>Mathify</h2>
+
+    </div>
+
+    <nav id="navbar">
+
+        <ul>
+
+            <li><a href="index.html">Home</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+            <li><a href="diameter.html">Diameter</a></li>
+            <li><a href="area.html">Area</a></li>
+            <li><a class="active" href="volume.html">Volume</a></li>
+            <li><a href="perimeter.html">Perimeter</a></li>
+            <li><a href="about.html">About</a></li>
+
+        </ul>
+
+    </nav>
+
+    <button id="menu-btn">
+
+        <i class="fa-solid fa-bars"></i>
+
+    </button>
+
+</header>
+
+<section class="page-banner">
+
+    <h1>Volume Calculators</h1>
+
+    <p>
+
+        Calculate the volume of different three-dimensional figures.
+
+    </p>
+
+</section>
+
+<section class="formula-grid">
+
+    <!-- Cube -->
+
+    <div class="formula-card">
+
+        <h2>Cube</h2>
+
+        <p><strong>Formula:</strong> V = s³</p>
+
+        <input type="number" id="cubeSide" placeholder="Side Length">
+
+        <button class="btn" onclick="cubeVolume()">Solve</button>
+
+        <button class="btn-outline" onclick="clearCube()">Reset</button>
+
+        <h3 id="cubeResult"></h3>
+
+    </div>
+
+    <!-- Rectangular Prism -->
+
+    <div class="formula-card">
+
+        <h2>Rectangular Prism</h2>
+
+        <p><strong>Formula:</strong> V = l × w × h</p>
+
+        <input type="number" id="prismLength" placeholder="Length">
+
+        <input type="number" id="prismWidth" placeholder="Width">
+
+        <input type="number" id="prismHeight" placeholder="Height">
+
+        <button class="btn" onclick="prismVolume()">Solve</button>
+
+        <button class="btn-outline" onclick="clearPrism()">Reset</button>
+
+        <h3 id="prismResult"></h3>
+
+    </div>
+
+    <!-- Cylinder -->
+
+    <div class="formula-card">
+
+        <h2>Cylinder</h2>
+
+        <p><strong>Formula:</strong> V = πr²h</p>
+
+        <input type="number" id="cylinderRadius" placeholder="Radius">
+
+        <input type="number" id="cylinderHeight" placeholder="Height">
+
+        <button class="btn" onclick="cylinderVolume()">Solve</button>
+
+        <button class="btn-outline" onclick="clearCylinder()">Reset</button>
+
+        <h3 id="cylinderResult"></h3>
+
+    </div>
+
+    <!-- Cone -->
+
+    <div class="formula-card">
+
+        <h2>Cone</h2>
+
+        <p><strong>Formula:</strong> V = (1/3)πr²h</p>
+
+        <input type="number" id="coneRadius" placeholder="Radius">
+
+        <input type="number" id="coneHeight" placeholder="Height">
+
+        <button class="btn" onclick="coneVolume()">Solve</button>
+
+        <button class="btn-outline" onclick="clearCone()">Reset</button>
+
+        <h3 id="coneResult"></h3>
+
+    </div>
+
+    <!-- Sphere -->
+
+    <div class="formula-card">
+
+        <h2>Sphere</h2>
+
+        <p><strong>Formula:</strong> V = (4/3)πr³</p>
+
+        <input type="number" id="sphereRadius" placeholder="Radius">
+
+        <button class="btn" onclick="sphereVolume()">Solve</button>
+
+        <button class="btn-outline" onclick="clearSphere()">Reset</button>
+
+        <h3 id="sphereResult"></h3>
+
+    </div>
+
+    <!-- Pyramid -->
+
+    <div class="formula-card">
+
+        <h2>Pyramid</h2>
+
+        <p><strong>Formula:</strong> V = (l × w × h) ÷ 3</p>
+
+        <input type="number" id="pyramidLength" placeholder="Length">
+
+        <input type="number" id="pyramidWidth" placeholder="Width">
+
+        <input type="number" id="pyramidHeight" placeholder="Height">
+
+        <button class="btn" onclick="pyramidVolume()">Solve</button>
+
+        <button class="btn-outline" onclick="clearPyramid()">Reset</button>
+
+        <h3 id="pyramidResult"></h3>
+
+    </div>
+
+</section>
+
+<section class="features-info">
+
+    <h2>Volume Formula Guide</h2>
+
+    <div class="feature-container">
+
+        <div class="feature">
+
+            <i class="fa-solid fa-cube"></i>
+
+            <h3>Cube</h3>
+
+            <p>All sides of a cube are equal in length.</p>
+
+        </div>
+
+        <div class="feature">
+
+            <i class="fa-solid fa-box"></i>
+
+            <h3>Rectangular Prism</h3>
+
+            <p>Multiply the length, width, and height.</p>
+
+        </div>
+
+        <div class="feature">
+
+            <i class="fa-solid fa-database"></i>
+
+            <h3>Cylinder</h3>
+
+            <p>Multiply the circular base area by the height.</p>
+
+        </div>
+
+        <div class="feature">
+
+            <i class="fa-solid fa-mountain"></i>
+
+            <h3>Cone</h3>
+
+            <p>A cone's volume is one-third of a cylinder with the same base and height.</p>
+
+        </div>
+
+        <div class="feature">
+
+            <i class="fa-regular fa-circle"></i>
+
+            <h3>Sphere</h3>
+
+            <p>The volume depends only on the radius.</p>
+
+        </div>
+
+        <div class="feature">
+
+            <i class="fa-solid fa-landmark"></i>
+
+            <h3>Pyramid</h3>
+
+            <p>Multiply the base area by the height and divide by three.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <div class="footer-content">
+
+        <h2>Mathify</h2>
+
+        <p>Learn • Calculate • Achieve</p>
+
+        <p>© 2026 Mathify. All Rights Reserved.</p>
+
+    </div>
+
+</footer>
+
+<button id="topBtn">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+<script src="javascript.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mathify | Scientific Calculator</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-square-root-variable"></i>
+
+            <h2>Mathify</h2>
+
+        </div>
+
+        <nav id="navbar">
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a class="active" href="calculator.html">Calculator</a></li>
+
+                <li><a href="diameter.html">Diameter</a></li>
+
+                <li><a href="area.html">Area</a></li>
+
+                <li><a href="volume.html">Volume</a></li>
+
+                <li><a href="perimeter.html">Perimeter</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+            </ul>
+
+        </nav>
+
+        <button id="menu-btn">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </header>
+
+    <!-- PAGE TITLE -->
+
+    <section class="page-banner">
+
+        <h1>Scientific Calculator</h1>
+
+        <p>
+
+            Solve mathematical expressions quickly and accurately.
+
+        </p>
+
+    </section>
+
+    <!-- CALCULATOR -->
+
+    <section class="calculator-section">
+
+        <div class="calculator-container">
+
+            <div class="calculator">
+
+                <input
+                    type="text"
+                    id="display"
+                    placeholder="0"
+                    readonly>
+
+                <div class="calculator-buttons">
+
+                    <button class="special" onclick="clearDisplay()">AC</button>
+                    <button class="special" onclick="deleteLast()">DEL</button>
+                    <button class="operator" onclick="appendValue('%')">%</button>
+                    <button class="operator" onclick="appendValue('/')">÷</button>
+
+                    <button onclick="appendValue('7')">7</button>
+                    <button onclick="appendValue('8')">8</button>
+                    <button onclick="appendValue('9')">9</button>
+                    <button class="operator" onclick="appendValue('*')">×</button>
+
+                    <button onclick="appendValue('4')">4</button>
+                    <button onclick="appendValue('5')">5</button>
+                    <button onclick="appendValue('6')">6</button>
+                    <button class="operator" onclick="appendValue('-')">−</button>
+
+                    <button onclick="appendValue('1')">1</button>
+                    <button onclick="appendValue('2')">2</button>
+                    <button onclick="appendValue('3')">3</button>
+                    <button class="operator" onclick="appendValue('+')">+</button>
+
+                    <button onclick="appendValue('0')">0</button>
+                    <button onclick="appendValue('.')">.</button>
+                    <button onclick="appendValue('(')">(</button>
+                    <button onclick="appendValue(')')">)</button>
+
+                    <button class="operator" onclick="appendValue('**')">xʸ</button>
+
+                    <button class="operator" onclick="squareRoot()">
+
+                        √
+
+                    </button>
+
+                    <button class="equal" onclick="calculate()">
+
+                        =
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FEATURES -->
+
+    <section class="features-info">
+
+        <h2>Calculator Features</h2>
+
+        <div class="feature-container">
+
+            <div class="feature">
+
+                <i class="fa-solid fa-plus-minus"></i>
+
+                <h3>Basic Operations</h3>
+
+                <p>
+
+                    Addition, subtraction, multiplication and division.
+
+                </p>
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-square-root-variable"></i>
+
+                <h3>Square Root</h3>
+
+                <p>
+
+                    Calculate square roots instantly.
+
+                </p>
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-superscript"></i>
+
+                <h3>Exponents</h3>
+
+                <p>
+
+                    Solve powers using xʸ.
+
+                </p>
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-percent"></i>
+
+                <h3>Percentage</h3>
+
+                <p>
+
+                    Compute percentages easily.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- HISTORY -->
+
+    <section class="history-section">
+
+        <h2>Calculation History</h2>
+
+        <ul id="historyList">
+
+        </ul>
+
+        <button class="btn" onclick="clearHistory()">
+
+            Clear History
+
+        </button>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h2>Mathify</h2>
+
+            <p>
+
+                Learn • Calculate • Achieve
+
+            </p>
+
+            <p>
+
+                © 2026 Mathify. All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- Scroll Button -->
+
+    <button id="topBtn">
+
+        <i class="fa-solid fa-arrow-up"></i>
+
+    </button>
+
+    <!-- External JavaScript -->
+
+    <script src="javascript.js"></script>
+
+</body>
+
+</html>
