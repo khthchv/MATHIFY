@@ -1846,3 +1846,82 @@ table td:first-child{
     }
 
 }
+
+/*====================================
+        MATHEMATICS CORNER
+=====================================*/
+
+.math-corner{
+
+    padding:80px 8%;
+    background:#fff5fa;
+
+}
+
+.corner-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:25px;
+
+    margin-top:40px;
+
+}
+
+.corner-card{
+
+    background:#fff;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.corner-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.corner-card i{
+
+    font-size:40px;
+
+    color:#f06292;
+
+    margin-bottom:15px;
+
+}
+
+.corner-card h3{
+
+    color:#d63384;
+
+    margin-bottom:15px;
+
+}
+
+.corner-card h4{
+
+    color:#ec407a;
+
+    margin-bottom:10px;
+
+}
+
+.corner-card p{
+
+    line-height:1.8;
+
+    min-height:90px;
+
+}
