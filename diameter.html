@@ -82,167 +82,141 @@
 
     </section>
 
-    <!-- CALCULATORS -->
+   <!-- CALCULATORS -->
 
-    <section class="formula-grid">
+<section class="formula-grid">
 
-        <!-- Diameter -->
+    <!-- Diameter -->
+    <div class="formula-card">
 
-        <div class="formula-card">
+        <h2>Diameter</h2>
 
-            <h2>Diameter</h2>
+        <h4>Formula</h4>
 
-            <h4>Formula</h4>
+        <p><strong>D = 2 × r</strong></p>
 
-            <p><strong>d = 2 × r</strong></p>
+        <input
+            type="number"
+            id="diameterRadius"
+            placeholder="Enter Radius">
 
-            <input
-                type="number"
-                id="radius1"
-                placeholder="Enter Radius">
+        <button class="btn" onclick="calculateDiameter()">
+            Solve
+        </button>
 
-            <button class="btn" onclick="diameter()">
+        <button class="btn-outline" onclick="clearDiameter()">
+            Reset
+        </button>
 
-                Solve
+        <h3 id="diameterResult">Answer:</h3>
 
-            </button>
+    </div>
 
-            <button class="btn-outline" onclick="clearDiameter()">
+    <!-- Radius -->
+    <div class="formula-card">
 
-                Reset
+        <h2>Radius</h2>
 
-            </button>
+        <h4>Formula</h4>
 
-            <h3 id="diameterResult"></h3>
+        <p><strong>r = D ÷ 2</strong></p>
 
-        </div>
+        <input
+            type="number"
+            id="radiusDiameter"
+            placeholder="Enter Diameter">
 
-        <!-- Radius -->
+        <button class="btn" onclick="calculateRadius()">
+            Solve
+        </button>
 
-        <div class="formula-card">
+        <button class="btn-outline" onclick="clearRadius()">
+            Reset
+        </button>
 
-            <h2>Radius</h2>
+        <h3 id="radiusResult">Answer:</h3>
 
-            <h4>Formula</h4>
+    </div>
 
-            <p><strong>r = d ÷ 2</strong></p>
+    <!-- Circumference -->
+    <div class="formula-card">
 
-            <input
-                type="number"
-                id="diameterInput"
-                placeholder="Enter Diameter">
+        <h2>Circumference</h2>
 
-            <button class="btn" onclick="radius()">
+        <h4>Formula</h4>
 
-                Solve
+        <p><strong>C = 2πr</strong></p>
 
-            </button>
+        <input
+            type="number"
+            id="circumferenceRadius"
+            placeholder="Enter Radius">
 
-            <button class="btn-outline" onclick="clearRadius()">
+        <button class="btn" onclick="calculateCircumference()">
+            Solve
+        </button>
 
-                Reset
+        <button class="btn-outline" onclick="clearCircumference()">
+            Reset
+        </button>
 
-            </button>
+        <h3 id="circumferenceResult">Answer:</h3>
 
-            <h3 id="radiusResult"></h3>
+    </div>
 
-        </div>
+    <!-- Area -->
+    <div class="formula-card">
 
-        <!-- Circumference -->
+        <h2>Area of Circle</h2>
 
-        <div class="formula-card">
+        <h4>Formula</h4>
 
-            <h2>Circumference</h2>
+        <p><strong>A = πr²</strong></p>
 
-            <h4>Formula</h4>
+        <input
+            type="number"
+            id="areaRadius"
+            placeholder="Enter Radius">
 
-            <p><strong>C = 2πr</strong></p>
+        <button class="btn" onclick="calculateArea()">
+            Solve
+        </button>
 
-            <input
-                type="number"
-                id="radius2"
-                placeholder="Enter Radius">
+        <button class="btn-outline" onclick="clearArea()">
+            Reset
+        </button>
 
-            <button class="btn" onclick="circumference()">
+        <h3 id="areaResult">Answer:</h3>
 
-                Solve
+    </div>
 
-            </button>
+    <!-- Radius from Circumference -->
+    <div class="formula-card">
 
-            <button class="btn-outline" onclick="clearCircumference()">
+        <h2>Radius from Circumference</h2>
 
-                Reset
+        <h4>Formula</h4>
 
-            </button>
+        <p><strong>r = C ÷ (2π)</strong></p>
 
-            <h3 id="circumferenceResult"></h3>
+        <input
+            type="number"
+            id="radiusCircumference"
+            placeholder="Enter Circumference">
 
-        </div>
+        <button class="btn" onclick="calculateRadiusFromCircumference()">
+            Solve
+        </button>
 
-        <!-- Area -->
+        <button class="btn-outline" onclick="clearRadiusFromCircumference()">
+            Reset
+        </button>
 
-        <div class="formula-card">
+        <h3 id="radiusCircumferenceResult">Answer:</h3>
 
-            <h2>Area of Circle</h2>
+    </div>
 
-            <h4>Formula</h4>
-
-            <p><strong>A = πr²</strong></p>
-
-            <input
-                type="number"
-                id="radius3"
-                placeholder="Enter Radius">
-
-            <button class="btn" onclick="circleArea()">
-
-                Solve
-
-            </button>
-
-            <button class="btn-outline" onclick="clearAreaCircle()">
-
-                Reset
-
-            </button>
-
-            <h3 id="areaResult"></h3>
-
-        </div>
-
-        <!-- Radius from Circumference -->
-
-        <div class="formula-card">
-
-            <h2>Radius from Circumference</h2>
-
-            <h4>Formula</h4>
-
-            <p><strong>r = C ÷ (2π)</strong></p>
-
-            <input
-                type="number"
-                id="circumferenceInput"
-                placeholder="Enter Circumference">
-
-            <button class="btn" onclick="radiusFromCircumference()">
-
-                Solve
-
-            </button>
-
-            <button class="btn-outline" onclick="clearRadiusCircumference()">
-
-                Reset
-
-            </button>
-
-            <h3 id="radiusCircumferenceResult"></h3>
-
-        </div>
-
-    </section>
-
+</section>
     <!-- INFORMATION -->
 
     <section class="info-section">
