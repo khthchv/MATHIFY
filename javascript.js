@@ -371,37 +371,52 @@ function randomItem(array){
 
 function showMathFact(){
 
-    document.getElementById("mathFact").textContent =
-    randomItem(mathFacts);
+    const fact = document.getElementById("mathFact");
+
+    if(!fact) return;
+
+    fact.textContent = randomItem(mathFacts);
 
 }
 
 function showMathTrivia(){
 
-    document.getElementById("mathTrivia").textContent =
-    randomItem(mathTrivia);
+    const trivia = document.getElementById("mathTrivia");
+
+    if(!trivia) return;
+
+    trivia.textContent = randomItem(mathTrivia);
 
 }
 
 function showMathematician(){
 
+    const name = document.getElementById("mathematicianName");
+    const fact = document.getElementById("mathematicianFact");
+
+    if(!name || !fact) return;
+
     const person = randomItem(mathematicians);
 
-    document.getElementById("mathematicianName").textContent =
-    person.name;
-
-    document.getElementById("mathematicianFact").textContent =
-    person.fact;
+    name.textContent = person.name;
+    fact.textContent = person.fact;
 
 }
 // ============================
 // INITIALIZE CONTENT
 // ============================
 
-showMathFact();
-showMathTrivia();
-showMathematician();
+if(document.getElementById("mathFact")){
+    showMathFact();
+}
 
+if(document.getElementById("mathTrivia")){
+    showMathTrivia();
+}
+
+if(document.getElementById("mathematicianName")){
+    showMathematician();
+}
 const fact=document.getElementById("fact");
 
 const factBtn=document.getElementById("factBtn");
