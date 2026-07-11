@@ -427,8 +427,6 @@ if(factBtn){
     factBtn.addEventListener("click",randomFact);
 
 }
-
-
 /*=========================================
             GREETING
 =========================================*/
