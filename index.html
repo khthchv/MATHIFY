@@ -262,21 +262,73 @@
 
     </section>
 
-    <!-- ================= FUN FACT ================= -->
+    <!-- ================= MATHEMATICS CORNER ================= -->
 
-    <section class="fact">
+<section class="math-corner">
 
-        <h2>Did You Know?</h2>
+    <h2 class="title">Mathematics Corner</h2>
 
-        <p id="fact"></p>
+    <div class="corner-grid">
 
-        <button id="factBtn" class="btn">
+        <!-- Fun Fact -->
 
-            New Fun Fact
+        <div class="corner-card">
 
-        </button>
+            <i class="fa-solid fa-lightbulb"></i>
 
-    </section>
+            <h3>Fun Fact</h3>
+
+            <p id="mathFact"></p>
+
+            <button class="btn" onclick="showMathFact()">
+
+                New Fact
+
+            </button>
+
+        </div>
+
+        <!-- Trivia -->
+
+        <div class="corner-card">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <h3>Math Trivia</h3>
+
+            <p id="mathTrivia"></p>
+
+            <button class="btn" onclick="showMathTrivia()">
+
+                New Trivia
+
+            </button>
+
+        </div>
+
+        <!-- Mathematician -->
+
+        <div class="corner-card">
+
+            <i class="fa-solid fa-user-graduate"></i>
+
+            <h3>Featured Mathematician</h3>
+
+            <h4 id="mathematicianName"></h4>
+
+            <p id="mathematicianFact"></p>
+
+            <button class="btn" onclick="showMathematician()">
+
+                Next
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
 
     <!-- ================= QUICK LINKS ================= -->
 
