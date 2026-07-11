@@ -88,128 +88,145 @@
 
     <!-- AREA CALCULATORS -->
 
-    <section class="formula-grid">
+<section class="formula-grid">
 
-        <!-- Rectangle -->
+    <!-- Rectangle -->
+    <div class="formula-card">
 
-        <div class="formula-card">
+        <h2>Rectangle</h2>
 
-            <h2>Rectangle</h2>
+        <p><strong>Formula:</strong> A = Length × Width</p>
 
-            <p><strong>Formula:</strong> A = Length × Width</p>
+        <input type="number" id="rectLength" placeholder="Enter Length">
 
-            <input type="number" id="rectLength" placeholder="Length">
+        <input type="number" id="rectWidth" placeholder="Enter Width">
 
-            <input type="number" id="rectWidth" placeholder="Width">
+        <button class="btn" onclick="calculateRectangleArea()">
+            Solve
+        </button>
 
-            <button class="btn" onclick="rectangleArea()">Solve</button>
+        <button class="btn-outline" onclick="clearRectangleArea()">
+            Reset
+        </button>
 
-            <button class="btn-outline" onclick="clearRectangle()">Reset</button>
+        <h3 id="rectangleResult">Answer:</h3>
 
-            <h3 id="rectangleResult"></h3>
+    </div>
 
-        </div>
+    <!-- Square -->
+    <div class="formula-card">
 
-        <!-- Square -->
+        <h2>Square</h2>
 
-        <div class="formula-card">
+        <p><strong>Formula:</strong> A = Side²</p>
 
-            <h2>Square</h2>
+        <input type="number" id="squareSide" placeholder="Enter Side">
 
-            <p><strong>Formula:</strong> A = Side²</p>
+        <button class="btn" onclick="calculateSquareArea()">
+            Solve
+        </button>
 
-            <input type="number" id="squareSide" placeholder="Side">
+        <button class="btn-outline" onclick="clearSquareArea()">
+            Reset
+        </button>
 
-            <button class="btn" onclick="squareArea()">Solve</button>
+        <h3 id="squareResult">Answer:</h3>
 
-            <button class="btn-outline" onclick="clearSquare()">Reset</button>
+    </div>
 
-            <h3 id="squareResult"></h3>
+    <!-- Triangle -->
+    <div class="formula-card">
 
-        </div>
+        <h2>Triangle</h2>
 
-        <!-- Triangle -->
+        <p><strong>Formula:</strong> A = ½ × Base × Height</p>
 
-        <div class="formula-card">
+        <input type="number" id="triangleBase" placeholder="Enter Base">
 
-            <h2>Triangle</h2>
+        <input type="number" id="triangleHeight" placeholder="Enter Height">
 
-            <p><strong>Formula:</strong> A = ½ × Base × Height</p>
+        <button class="btn" onclick="calculateTriangleArea()">
+            Solve
+        </button>
 
-            <input type="number" id="triangleBase" placeholder="Base">
+        <button class="btn-outline" onclick="clearTriangleArea()">
+            Reset
+        </button>
 
-            <input type="number" id="triangleHeight" placeholder="Height">
+        <h3 id="triangleResult">Answer:</h3>
 
-            <button class="btn" onclick="triangleArea()">Solve</button>
+    </div>
 
-            <button class="btn-outline" onclick="clearTriangle()">Reset</button>
+    <!-- Circle -->
+    <div class="formula-card">
 
-            <h3 id="triangleResult"></h3>
+        <h2>Circle</h2>
 
-        </div>
+        <p><strong>Formula:</strong> A = πr²</p>
 
-        <!-- Circle -->
+        <input type="number" id="circleRadius" placeholder="Enter Radius">
 
-        <div class="formula-card">
+        <button class="btn" onclick="calculateCircleArea()">
+            Solve
+        </button>
 
-            <h2>Circle</h2>
+        <button class="btn-outline" onclick="clearCircleArea()">
+            Reset
+        </button>
 
-            <p><strong>Formula:</strong> A = πr²</p>
+        <h3 id="circleResult">Answer:</h3>
 
-            <input type="number" id="circleRadius" placeholder="Radius">
+    </div>
 
-            <button class="btn" onclick="areaCircle()">Solve</button>
+    <!-- Parallelogram -->
+    <div class="formula-card">
 
-            <button class="btn-outline" onclick="clearCircle()">Reset</button>
+        <h2>Parallelogram</h2>
 
-            <h3 id="circleResult"></h3>
+        <p><strong>Formula:</strong> A = Base × Height</p>
 
-        </div>
+        <input type="number" id="paraBase" placeholder="Enter Base">
 
-        <!-- Parallelogram -->
+        <input type="number" id="paraHeight" placeholder="Enter Height">
 
-        <div class="formula-card">
+        <button class="btn" onclick="calculateParallelogramArea()">
+            Solve
+        </button>
 
-            <h2>Parallelogram</h2>
+        <button class="btn-outline" onclick="clearParallelogramArea()">
+            Reset
+        </button>
 
-            <p><strong>Formula:</strong> A = Base × Height</p>
+        <h3 id="parallelogramResult">Answer:</h3>
 
-            <input type="number" id="paraBase" placeholder="Base">
+    </div>
 
-            <input type="number" id="paraHeight" placeholder="Height">
+    <!-- Trapezoid -->
+    <div class="formula-card">
 
-            <button class="btn" onclick="parallelogramArea()">Solve</button>
+        <h2>Trapezoid</h2>
 
-            <button class="btn-outline" onclick="clearParallelogram()">Reset</button>
+        <p><strong>Formula:</strong> A = ((a + b) × h) ÷ 2</p>
 
-            <h3 id="parallelogramResult"></h3>
+        <input type="number" id="trapBase1" placeholder="Enter Base 1">
 
-        </div>
+        <input type="number" id="trapBase2" placeholder="Enter Base 2">
 
-        <!-- Trapezoid -->
+        <input type="number" id="trapHeight" placeholder="Enter Height">
 
-        <div class="formula-card">
+        <button class="btn" onclick="calculateTrapezoidArea()">
+            Solve
+        </button>
 
-            <h2>Trapezoid</h2>
+        <button class="btn-outline" onclick="clearTrapezoidArea()">
+            Reset
+        </button>
 
-            <p><strong>Formula:</strong> A = ((a + b) × h) ÷ 2</p>
+        <h3 id="trapezoidResult">Answer:</h3>
 
-            <input type="number" id="trapBase1" placeholder="Base 1">
+    </div>
 
-            <input type="number" id="trapBase2" placeholder="Base 2">
-
-            <input type="number" id="trapHeight" placeholder="Height">
-
-            <button class="btn" onclick="trapezoidArea()">Solve</button>
-
-            <button class="btn-outline" onclick="clearTrapezoid()">Reset</button>
-
-            <h3 id="trapezoidResult"></h3>
-
-        </div>
-
-    </section>
-
+</section>
     <!-- EDUCATIONAL SECTION -->
 
     <section class="features-info">
