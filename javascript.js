@@ -196,33 +196,211 @@ if(quote){
 }
 
 
-/*=========================================
-            FUN FACTS
-=========================================*/
+/*====================================
+        MATHEMATICS CORNER
+=====================================*/
 
-const facts=[
+const mathFacts = [
 
-"Zero is the only number that cannot be represented using Roman numerals.",
+"Zero (0) is the only number that cannot be represented using Roman numerals.",
 
-"A circle has infinite lines of symmetry.",
-
-"Pi never ends and never repeats.",
-
-"A googol is the number 1 followed by 100 zeros.",
-
-"The equals sign (=) was invented in 1557.",
-
-"Ancient Egyptians used geometry to build pyramids.",
-
-"The word mathematics comes from the Greek word 'mathema'.",
+"Pi (π) is an irrational number, meaning its decimal digits never end and never repeat.",
 
 "There are infinitely many prime numbers.",
 
-"A right angle measures exactly 90 degrees.",
+"The word 'mathematics' comes from the Greek word 'máthēma,' meaning knowledge or learning.",
 
-"Every square is also a rectangle."
+"A googol is the number 1 followed by 100 zeros.",
+
+"A googolplex is 1 followed by a googol zeros, which is too large to write in the observable universe.",
+
+"The equals sign (=) was invented by Welsh mathematician Robert Recorde in 1557.",
+
+"Every even number greater than 2 can be written as the sum of two prime numbers according to the Goldbach Conjecture, which remains unproven.",
+
+"The Fibonacci sequence appears naturally in flowers, pinecones, pineapples, and sunflower seed patterns.",
+
+"A circle has an infinite number of lines of symmetry.",
+
+"Zero is both an even number and an integer.",
+
+"The number π (pi) has been calculated to trillions of decimal places.",
+
+"The decimal number system uses base 10 because humans have ten fingers.",
+
+"A triangle's interior angles always add up to 180 degrees in Euclidean geometry.",
+
+"The symbol ∞ for infinity was introduced by John Wallis in 1655.",
+
+"The number e (approximately 2.71828) is the base of natural logarithms and appears throughout science and engineering.",
+
+"A palindrome number reads the same forwards and backwards, like 121 or 1331.",
+
+"The largest known prime numbers contain millions of digits.",
+
+"The ancient Babylonians used a base-60 number system, which is why an hour has 60 minutes.",
+
+"Perfect numbers are positive integers equal to the sum of their proper divisors. For example, 6 = 1 + 2 + 3."
 
 ];
+
+const mathTrivia = [
+
+"Did you know? Sudoku is based on logic, not arithmetic.",
+
+"The world's most famous unsolved math problem is the Riemann Hypothesis.",
+
+"The Rubik's Cube has over 43 quintillion possible arrangements.",
+
+"There are exactly five Platonic solids.",
+
+"The Pythagorean Theorem applies only to right triangles.",
+
+"The probability of shuffling a deck of cards into the exact same order twice is incredibly small (1 in 52!).",
+
+"Prime numbers are numbers greater than 1 that have exactly two factors.",
+
+"Negative numbers were once considered impossible by many ancient civilizations.",
+
+"The symbol √ for square root was introduced in the 1500s.",
+
+"The number 1729 is known as the Hardy-Ramanujan Number because it is the smallest number expressible as the sum of two cubes in two different ways.",
+
+"A Möbius strip has only one side and one edge.",
+
+"Chess has more possible game positions than there are atoms in the observable universe.",
+
+"Hexagons are the most efficient shape for covering a flat surface without gaps.",
+
+"Every square number has an odd number of factors.",
+
+"The ancient Egyptians used geometry to measure farmland after floods."
+
+];
+
+const mathematicians = [
+
+{
+name:"Pythagoras",
+fact:"Greek mathematician best known for the Pythagorean Theorem."
+},
+
+{
+name:"Euclid",
+fact:"Known as the Father of Geometry. He wrote 'Elements,' one of the most influential mathematics books ever."
+},
+
+{
+name:"Archimedes",
+fact:"Discovered principles of buoyancy and developed formulas for the area and volume of many shapes."
+},
+
+{
+name:"Isaac Newton",
+fact:"Co-developed calculus and formulated the laws of motion and universal gravitation."
+},
+
+{
+name:"Gottfried Wilhelm Leibniz",
+fact:"Independently developed calculus and introduced many mathematical symbols still used today."
+},
+
+{
+name:"Leonhard Euler",
+fact:"Introduced modern mathematical notation including f(x), e, and Σ."
+},
+
+{
+name:"Carl Friedrich Gauss",
+fact:"Often called the Prince of Mathematicians because of his contributions to number theory, algebra, and astronomy."
+},
+
+{
+name:"Srinivasa Ramanujan",
+fact:"An Indian mathematical genius who made extraordinary discoveries in number theory despite little formal training."
+},
+
+{
+name:"Blaise Pascal",
+fact:"Developed Pascal's Triangle and contributed to probability theory."
+},
+
+{
+name:"René Descartes",
+fact:"Created the Cartesian coordinate system used in graphing."
+
+},
+
+{
+name:"John Napier",
+fact:"Invented logarithms, making difficult calculations much easier."
+
+},
+
+{
+name:"Hypatia",
+fact:"One of the earliest known female mathematicians and philosophers from Alexandria."
+
+},
+
+{
+name:"Emmy Noether",
+fact:"Made groundbreaking contributions to abstract algebra and theoretical physics."
+
+},
+
+{
+name:"John Wallis",
+fact:"Introduced the infinity symbol (∞)."
+
+},
+
+{
+name:"Robert Recorde",
+fact:"Invented the equals sign (=) in 1557."
+
+}
+
+];
+
+function randomItem(array){
+
+    return array[Math.floor(Math.random()*array.length)];
+
+}
+
+function showMathFact(){
+
+    document.getElementById("mathFact").textContent =
+    randomItem(mathFacts);
+
+}
+
+function showMathTrivia(){
+
+    document.getElementById("mathTrivia").textContent =
+    randomItem(mathTrivia);
+
+}
+
+function showMathematician(){
+
+    const person = randomItem(mathematicians);
+
+    document.getElementById("mathematicianName").textContent =
+    person.name;
+
+    document.getElementById("mathematicianFact").textContent =
+    person.fact;
+
+}
+// ============================
+// INITIALIZE CONTENT
+// ============================
+
+showMathFact();
+showMathTrivia();
+showMathematician();
 
 const fact=document.getElementById("fact");
 
